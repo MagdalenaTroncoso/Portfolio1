@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #ECF0F3;
+    font-family: "poppins", sans-serif;
+}
+
+:root{
+    --color-fuente: #212122;
+    --color-fuente2: #FF014F;
+    --size-fuente1:12px;
+    --grosor-fuente: 500;
+}
+
+/* ---------------------------HEADER---------------------------*/
+nav{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 200px;
+    padding-right: 50px;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+/* Logo */
+nav img{
+    width: 45px;
+    height: 15px;
+}
+
+/* Lista */
+.nav-lista{
+    display: flex;
+    gap: 35px;
+}
+
+.sub-nav{
+    display: flex;
+    gap: 50px;
+}
+
+.nav-lista li{
+    list-style: none;
+    
+}
+
+.nav-lista a{
+    text-decoration: none;
+    color: var(--color-fuente);    
+    font-size: var(--size-fuente1);
+    font-weight: var(--grosor-fuente);
+}
+
+/* Boton Buy */
+.btn-buy{
+    color: var(--color-fuente2);
+    font-size: var(--size-fuente1);
+    font-weight: var(--grosor-fuente);
+    width: 100px;
+    height: 35px;
+    background: linear-gradient(to bottom right, #E2E8EC, #FDFDFE);
+    border:none;
+    border-radius: 5px;
+    box-shadow: -10px -10px 10px -5px white;
+}
+
+
+/* ---------------------------MAIN---------------------------*/
+main{
+    display: flex;
+    justify-content: center;
+    padding: 100px 200px;
+    gap: 140px;
+}
+
+/* Izquierda */
+.main-izq{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h5{
+    font-size: var(--size-fuente1);
+    font-weight: var(--grosor-fuente);
+    letter-spacing: 3px;
+}
+
+h1{
+    font-size: 45px;
+
+}
+
+h2{
+    font-size: 35px;
+}
+
+.presentacion p{
+    font-size: var(--size-fuente1);
+    font-weight: var(--grosor-fuente);
+    line-height: 25px;
+}
+
+
+
+.presentacion span{
+    color: var(--color-fuente2);
+}
+
+/* Redes */
+.redes-main{
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--size-fuente1);
+    font-weight: var(--grosor-fuente);
+}
+
+.redes-m{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Redes botones */
+.redes-m button{
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom right, #E2E8EC, #FDFDFE);
+    border:none;
+    border-radius: 5px;
+    box-shadow: -10px -10px 10px -5px white;
+}
+
+/* Derecha imagen */
+.main-der img{
+    width: 350px;
+    height: 400px;
+    border:none;
+    border-radius: 5px;
+    box-shadow: -10px -10px 20px -5px white;
+}
