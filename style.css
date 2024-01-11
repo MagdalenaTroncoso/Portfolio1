@@ -12,90 +12,114 @@
     --color-fuente2: #FF014F;
     --size-fuente1:12px;
     --grosor-fuente: 500;
+    --margen-seccion: 100px 200px;
+}
+
+/* todos los h5 */
+h5{
+    font-size: var(--size-fuente1);
+    font-weight: var(--grosor-fuente);
+    letter-spacing: 1.3px;
+}
+
+/* todos los h2 */
+h2{
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+/* lineas divisoras de secciones */
+.divisor{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom right, #b6c7d22e, #dbe7e752);
+    width: 100%;
+    height: 2px;
+    position: relative;
+    top: 50px;
 }
 
 /* ---------------------------HEADER---------------------------*/
+/* Menu de navegacion */
 nav{
     display: flex;
     align-items: center;
     height: 50px;
-    padding-left: 200px;
-    padding-right: 50px;
-    padding-top: 10px;
+    margin: 10px 50px 0px 200px;
     justify-content: space-between;
 }
 
-/* Logo */
+/* Logo del header */
 nav img{
     width: 45px;
     height: 15px;
 }
 
-/* Lista */
-.nav-lista{
+/* Lista del menu*/
+.sub-nav, .nav-lista{
     display: flex;
     gap: 35px;
 }
 
-.sub-nav{
-    display: flex;
-    gap: 50px;
-}
-
 .nav-lista li{
     list-style: none;
-    
 }
 
 .nav-lista a{
     text-decoration: none;
-    color: var(--color-fuente);    
-    font-size: var(--size-fuente1);
-    font-weight: var(--grosor-fuente);
+    color: var(--color-fuente);
+    font-size: 10px;
+    font-weight: 600;
 }
 
 /* Boton Buy */
 .btn-buy{
     color: var(--color-fuente2);
-    font-size: var(--size-fuente1);
-    font-weight: var(--grosor-fuente);
+    font-size: 10px;
+    font-weight: 600;
     width: 100px;
     height: 35px;
     background: linear-gradient(to bottom right, #E2E8EC, #FDFDFE);
     border:none;
     border-radius: 5px;
     box-shadow: -10px -10px 10px -5px white;
+    cursor: pointer;
+}
+
+/* boton menu desplegable para media queries mobile */
+header .btn-menu{
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 
 /* ---------------------------MAIN---------------------------*/
 main{
     display: flex;
-    justify-content: center;
-    padding: 100px 200px;
-    gap: 140px;
+    justify-content: space-between;
+    margin: 100px 150px 100px 200px;
 }
 
-/* Izquierda */
+/* Seccion Izquierda */
 .main-izq{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-h5{
-    font-size: var(--size-fuente1);
-    font-weight: var(--grosor-fuente);
-    letter-spacing: 3px;
+    width: 45%;
 }
 
 h1{
     font-size: 45px;
-
 }
 
-h2{
+main h2{
     font-size: 35px;
+    margin-bottom: 20px;
 }
 
 .presentacion p{
@@ -104,13 +128,15 @@ h2{
     line-height: 25px;
 }
 
-
-
 .presentacion span{
     color: var(--color-fuente2);
 }
 
-/* Redes */
+.presentacion .cursor{
+    font-weight: 300;
+}
+
+/* Botones de Redes Sociales */
 .redes-main{
     display: flex;
     justify-content: space-between;
@@ -123,21 +149,941 @@ h2{
     flex-direction: column;
     gap: 10px;
 }
-/* Redes botones */
-.redes-m button{
+
+.redes-m .btns-main{
+    display: flex;
+    gap: 15px;
+}
+/* Botones redes sociales: secciones Main y Contact */
+.btn-red{
     width: 40px;
     height: 40px;
     background: linear-gradient(to bottom right, #E2E8EC, #FDFDFE);
     border:none;
     border-radius: 5px;
     box-shadow: -10px -10px 10px -5px white;
+    color: black;
 }
 
-/* Derecha imagen */
+
+/* Seccion derecha: imagen */
 .main-der img{
-    width: 350px;
+    width: 370px;
     height: 400px;
     border:none;
     border-radius: 5px;
     box-shadow: -10px -10px 20px -5px white;
+}
+
+/* ---------------------------FEATURES---------------------------*/
+/* Seccion */
+.features{
+    display: flex;
+    margin: var(--margen-seccion);
+    flex-direction: column;
+}
+
+/* Encabezado */
+.features h5, .card-feature i{
+    color: var(--color-fuente2);
+}
+
+.features h2{
+    margin-bottom: 30px;
+}
+
+/* Contenedor Tarjetas */
+.cont-features{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Tarjetas */
+.card-feature{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 20px; 
+    width: 250px;
+    height: 150px;
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff); 
+}
+
+.card-feature p{
+    font-size: var(--size-fuente1);
+    font-weight: var(--grosor-fuente);
+    line-height: 25px;
+}
+
+.card-feature i, h3, p{
+    background-color: transparent;
+}
+
+.card-feature h3{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* ---------------------------PORTFOLIO---------------------------*/
+/* Seccion */
+.portfolio{
+    display: flex;
+    margin: var(--margen-seccion);
+    flex-direction: column;
+    align-items: center;
+}
+/* Encabezado */
+ .portfolio h5{
+    color: var(--color-fuente2);
+ }
+
+ /* Contenedor Tarjetas */
+ .cont-portfolio{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+ }
+
+/* Tarjetas*/
+ .card-portfolio{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 20px; 
+    width: 250px;
+    height: 300px;
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff); 
+}
+
+/* Imagen tarjeta */
+.card-portfolio img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 250px;
+    height: 150px;
+}
+
+/* Subtitulo tarjetas */
+.subt-portfolio {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+}
+
+.subt-portfolio .subt1{
+    color: var(--color-fuente2);
+    font-size: 10px;
+    background-color: transparent;
+}
+.subt-portfolio .subt2{
+    font-size: 10px;
+    background-color: transparent;
+}
+
+/* Titulo tarjetas */
+.card-portfolio h3{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* ---------------------------RESUME---------------------------*/
+/* Seccion */
+.resume{
+    display: flex;
+    justify-content: center;
+    margin: var(--margen-seccion);
+    flex-direction: column;
+    align-items: center;
+}
+
+/* subtitulo encabezado */
+.resume h5{
+    color: var(--color-fuente2);
+ }
+
+ /* Cinta de Botones */
+.btn-resume{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff); 
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.btn-resume a{
+    border:none;
+    width: 25%;
+    height: 60px;
+    font-size: 13px;
+    font-weight: 700;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* boton education */
+.btn-education{
+    color: var(--color-fuente2);
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff);
+    border-radius: 10px;
+}
+
+/* el resto de los botones */
+.btn-other{
+    color: var(--color-fuente);
+}
+
+/* borde redondeado de boton Interview */
+.btn-other-four{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Contenedor seccion Education y Experience */
+.cont-resume{
+    display: flex;
+    gap: 45px;
+}
+
+/* contenedor tarjetas lado izquierdo: Education */
+.cont-education{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* contenedor tarjetas lado derecho: Eperience */
+.cont-experience{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Titulos de contenedor Educatio  y Experience */
+.cont-education h2, .cont-experience h2{
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+/* Tarjetas resume */
+.card-resume{
+    display: flex;
+    flex-direction: column; 
+    padding: 30px 25px; 
+    margin-top: 30px;
+    width: 400px;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff); 
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.card-r-encabezado{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    margin-bottom: 30px;
+}
+.card-titulo{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+.card-titulo h3{
+    font-weight: 600;
+}
+.card-titulo h6{
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.card-r-parrafo{
+    background-color: transparent;
+    font-size: 13px;
+}
+
+.card-resume span{
+    background-color: white;
+    color: var(--color-fuente2);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.card-resume .point{
+    text-align: center;
+    width: 55px;  
+    height: 27px; 
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 8px 8px 10px -8px grey;
+}
+
+/* Linea cronologica izquierda */
+.linea-large-izq{
+    width: 4px;
+    height: 690px;
+    background-color:rgba(165, 163, 163, 0.286);
+    position: absolute;
+    right: 470px;
+    top: 90px;
+}
+
+/* lineas cortas */
+.short-izq {
+    width: 25px;
+    height: 4px;
+    background-color: rgba(165, 163, 163, 0.286);
+    position: absolute;
+    box-shadow: 0 0 10px 5px rgba(214, 214, 215, 0.407),
+      2px 5px 10px -5px rgba(147, 148, 148, 0.284);
+}
+
+.short-izq-one{
+    top: 30px;
+}
+
+.short-izq-two {
+    top: 275px;
+}
+  .short-izq-three {
+    top: 518px;
+}
+
+/* cronologia: circulos */
+.circle-izq {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(248, 243, 243);
+    border: 3px solid rgba(165, 163, 163, 0.385);
+    border-radius: 50px;
+    position: relative;
+    right: 4px;
+    box-shadow: 0 0 10px 5px rgba(214, 214, 215, 0.407),
+      2px 5px 10px -5px rgba(147, 148, 148, 0.284);
+}
+
+.circle-izq-one {
+    top: 25px;
+}
+.circle-izq-two {
+    top: 255px;
+}
+.circle-izq-three {
+    top: 480px;
+}
+
+
+/* Linea cronologica derecha */
+.linea-large-der{
+    width: 4px;
+    height: 690px;
+    background-color:rgba(165, 163, 163, 0.286);
+    position: absolute;
+    right: 470px;
+    top: 90px;
+}
+
+/* lineas cortas */
+.short-der {
+    width: 25px;
+    height: 4px;
+    background-color: rgba(165, 163, 163, 0.286);
+    position: absolute;
+    box-shadow: 0 0 10px 5px rgba(214, 214, 215, 0.407),
+      2px 5px 10px -5px rgba(147, 148, 148, 0.284);
+}
+
+.short-der-one{
+    top: 30px;
+}
+
+.short-der-two {
+    top: 275px;
+}
+  .short-der-three {
+    top: 518px;
+}
+
+/* cronologia: circulos */
+.circle-der {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(248, 243, 243);
+    border: 3px solid rgba(165, 163, 163, 0.385);
+    border-radius: 50px;
+    position: relative;
+    right: 4px;
+    box-shadow: 0 0 10px 5px rgba(214, 214, 215, 0.407),
+      2px 5px 10px -5px rgba(147, 148, 148, 0.284);
+}
+
+.circle-der-one {
+    top: 25px;
+}
+.circle-der-two {
+    top: 255px;
+}
+.circle-der-three {
+    top: 480px;
+}
+
+
+/* ---------------------------MY BLOG---------------------------*/
+
+/* Seccion */
+.blog{
+    display: flex;
+    justify-content: center;
+    margin: var(--margen-seccion);
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Subtitulo*/
+.blog h5{
+    color: var(--color-fuente2);
+}
+
+/* contenedor tarjetas */
+.cont-blog{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* tarjetas */
+.card-blog{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 310px;
+    border-radius: 10px;
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff); 
+}
+
+/* imagen de las tarjetas*/
+.card-blog img{
+    width: 240px;
+    height: 180px;
+    border-radius: 10px;    
+    position: relative;
+    top: -10px;
+    margin: 0 auto;
+}
+
+.card-blog div{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 240px;
+    margin: 0 auto;
+}
+
+.card-blog h3{
+    font-size: 17px;
+    font-weight: 600;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.card-blog div .descript{
+    color: var(--color-fuente2);
+    font-size: 10px;
+    background-color: transparent;
+}
+.card-blog div .time{
+    color: var(--color-fuente);
+    font-size: 10px;
+    background-color: transparent;
+}
+
+/* ---------------------------CONTACT---------------------------*/
+.contact{
+    display: flex;
+    justify-content: center;
+    margin: var(--margen-seccion);
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact h5{
+    color: var(--color-fuente2);
+}
+
+/* Contenedor general: datos de contacto y formularios */
+.cont-contact{
+    display: flex;
+    justify-content: space-between;
+}
+
+ /* Contenedor izquierdo: datos de contacto */
+.cont-contact-izq{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 500px;
+    border-radius: 10px;
+    padding: 20px; 
+    justify-content: space-between;
+    border:none;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff);
+}
+
+.cont-contact-izq img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.cont-contact-izq .phone-email, .cont-contact-izq p {
+    background-color: transparent;
+    font-size: 13px;
+}
+
+
+/* Botones redes sociales */
+.cont-contact-izq .cont-redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    height: 70px;
+    font-size: 11px;
+}
+
+.find{
+    background-color: transparent;
+}
+
+.cont-btn{
+    display: flex;
+    gap: 15px;
+    background-color: transparent;
+}
+
+/* Contenedor derecho: formulario a rellenar */
+.cont-contact-der{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 50%;
+    height: 500px;
+    border-radius: 10px;
+    border:none;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff);
+}
+
+.name-phone {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    font-size: 11px;
+}
+
+.name, .phone{
+    display: flex;
+    width: 48%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name, .phone{
+    background-color: transparent;
+}
+
+.email, .subject, .your-message{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    font-size: 11px;
+    gap: 10px;
+}
+
+label{
+    background-color: transparent;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-color: white;
+    height: 32px;
+}
+
+.your-message textarea{
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+/* boton enviar mensaje */
+.your-message button{
+    height: 40px;
+    background-color: var(--color-fuente2);
+    color: white;
+    font-size: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+
+/* ---------------------------FOOTER---------------------------*/
+footer{
+    display: flex;
+    margin: var(--margen-seccion);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+footer .inbio{
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+footer .rainbow{
+    font-size: 12px;
+}
+
+
+
+
+/* ------------------------------------RESPONSIVE---------------------------------------- */
+
+/* -------------  max-width: 992px  ------------- */
+@media screen and (max-width:992px){
+    /* Header */
+    nav{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sub-nav, .nav-lista{
+        display: flex;
+        gap: 20px;
+    }
+
+    /* Margenes de todas las secciones */
+    main, .features, .portfolio, .resume, .blog, .contact, footer{
+        margin: 50px 20px;
+    }
+
+    /* linea divisora de todas las secciones */
+    .divisor{
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 25px;
+    }
+
+    /* My resume */
+    .cont-resume{
+        flex-direction: column;
+    }
+
+    /* My blog */
+    .card-blog{
+        width: 220px;
+    }
+    .card-blog img{
+        width: 190px;
+    }
+
+    .card-blog div{
+    width: 190px;
+    }
+
+    .card-blog h3{
+        width: 190px;
+    }
+}
+
+/* -------------  max-width: 768px  ------------- */
+@media screen and (max-width:768px){
+    /* Header */
+    nav{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sub-nav, .nav-lista{
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-lista a{
+        font-size: 10px;
+    }
+
+    /* Margenes de todas las secciones */
+    main, .features, .portfolio, .resume, .blog, .contact, footer{
+        margin: 50px 20px;
+    }
+
+    /* Main */
+    .main-der{
+        display: flex;
+        align-items: center;
+    }
+    .main-der img{
+        width: 240px;
+        height: 250px;
+    }
+
+    .main-izq{
+        width: 50%;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+    main h2{
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .presentacion p{
+        font-size: 10px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .redes-m{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .redes-m .btns-main{
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-red{
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Features */
+    .features{
+        display: flex;
+        align-items: center;
+    }
+
+    /* My resume */
+    .cont-resume{
+        flex-direction: column;
+    }
+
+    /* My Blog */
+    .blog{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cont-blog{
+        flex-direction: column;
+    }
+}
+
+/* -------------  max-width: 576px  ------------- */
+@media screen and (max-width:576px){
+    h2{
+        font-size: 25px;
+    }
+    h5{
+        font-size: 8px;
+    }
+
+    /* Header */
+    
+    /* Menú desplegable */
+    .nav-lista{
+        display: none;
+    }
+    
+    header .btn-menu{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .nav-lista{
+        display: none;
+        position: absolute;
+        width: 100px;
+    }
+
+    .nav-lista li {
+        border-bottom: 1px solid black;
+        background-color: white;
+    }
+    .nav-lista li a{
+        background-color: white;
+    }
+
+    .btn-menu:hover .nav-lista{
+        display: block;
+        top: 50px;
+        right: 30px;
+    }
+
+    /* Main */
+    .main-der img{
+        width: 140px;
+        height: 150px;
+    }
+
+    .main-izq{
+        width: 50%;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    main h2{
+        font-size: 15px;
+    }
+
+    .presentacion p{
+        font-size: 8px;
+        line-height: 15px;
+    }
+
+    .presentacion h5, .redes-m span{
+        font-size: 8px;
+    }
+
+    .redes-main{
+        flex-wrap: wrap;
+    }
+
+    .redes-m .btns-main{
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-red{
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Features */
+    .card-feature{
+        width: 200px;
+    }
+
+    /* Portfolio */
+    .card-portfolio{
+        width: 200px;
+        height: 260px;
+    }
+    .card-portfolio img{
+        width: 200px;
+        height: 150px;
+    }
+
+    /* Resume */
+    .btn-resume{
+        height: 40px;
+    }
+
+    .btn-resume a{
+        height: 40px;
+        font-size: 10px;
+        align-content: center;
+    }
+    
+    .card-resume{
+        width: 250px;  
+        height: 170px;            
+    }
+
+    .card-r-parrafo{
+        font-size: 9px;
+    }
+
+    /* My blog */
+    .card-blog{
+        width: 220px;
+        height: 280px;
+    }
+    .card-blog img{
+        width: 190px;
+    }
+
+    .card-blog div{
+        width: 190px;
+    }
+
+    .card-blog h3{
+        width: 190px;
+    }
+
+    /* Contact us */
+    .cont-contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .cont-contact-izq{
+        width: 60%;
+        height: 400px;
+    }
+    .cont-contact-izq img{
+        width: 100%;
+        height: 150px;
+    }
+    .cont-contact-der{
+        width: 60%;
+        height: 400px;
+    }
+    .email, .subject, .your-message{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
 }

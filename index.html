@@ -26,17 +26,30 @@
                 </ul>
                 <a href="#"><button class="btn-buy">BUY NOW</button></a>
             </div>
+
+            <!-- Menu desplegable para media queries mobile -->
+            <button class="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="nav-lista">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#features">FEATURES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#resume">RESUME</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </button>
         </nav>
     </header>
 
 <!--.................. MAIN ..................-->
     <main id="home">
-    <!-- IZQUIERDA -->
+    <!-- Box izquierdo -->
         <section class="main-izq">
             <div class="presentacion">
                 <h5>WELCOME TO MY WORLD</h5>
                 <h1>Hi, I'm <span>Sheroz Mir</span></h1>
-                <h2><span>a</span> UX UI Designer</h2>
+                <h2><span>a</span> UX UI Designer<span class="cursor">|</span></h2> 
                 <p>I use animation as a third dimension by which to simplify experience and kuiding thro each and every interaction. I'm not adding motion just to spruce things up, but doing it in ways that.</p>
             </div>
 
@@ -44,76 +57,77 @@
             <div class="redes-main">
                 <div class="redes-m">
                     <span>FIND WITH ME</span>
-                    <span>
-                        <button><i class="fa-brands fa-facebook-f"></i></button>
-                        <button><i class="fa-brands fa-instagram"></i></button>
-                        <button><i class="fa-brands fa-linkedin-in"></i></button>
+                    <span class="btns-main">                       
+                        <button class="btn-red"><a href="#" class="btn-red"><i class="fa-brands fa-facebook-f"></i></a></button>
+                        <button class="btn-red"><a href="#" class="btn-red"><i class="fa-brands fa-instagram"></i></i></a></button>
+                        <button class="btn-red"><a href="#" class="btn-red"><i class="fa-brands fa-linkedin-in"></i></i></a></button>
                     </span>
                 </div>
     
                 <div class="redes-m">
                     <span> BEST SKILL ON</span>
-                    <span>
-                        <button><i class="fa-brands fa-invision"></i></button>
-                        <button><i class="fa-brands fa-sketch"></i></button>
-                        <button><i class="fa-brands fa-figma"></i></button>
+                    <span class="btns-main">
+                        <button class="btn-red"><a href="#" class="btn-red"><i class="fa-brands fa-invision"></i></a></button>
+                        <button class="btn-red"><a href="#" class="btn-red"><i class="fa-brands fa-sketch"></i></a></button>
+                        <button class="btn-red"><a href="#" class="btn-red"><i class="fa-brands fa-figma"></i></a></button>
                     </span>
                 </div>
-            </div>           
+            </div> 
         </section>
 
 
-    <!-- DERECHA -->
+    <!-- Box derecho -->
         <section class="main-der">
             <img src="images/perfil.jpg" alt="perfil">
         </section>
-
     </main>
-
 
 <!--.................. FEATURES ..................-->
     <section class="features" id="features">
         <h5>FEATURES</h5>
         <h2>What I Do</h2>
 
-        <!-- Cont features -->
+        <!-- Contenedor features tarjetas -->
         <div class="cont-features">
-            <div class="card-bs">
+            <div class="card-feature">
                 <i class="fa-solid fa-bars"></i>
                 <h3>Business Strategy</h3>
                 <p>I throw myself down among the tall grass by the stream as i lie close to the earth.</p>
             </div>
 
-            <div class="card-ad1">
-                <i class="fa-light fa-book-open"></i>
+            <div class="card-feature">
+                <i class="fa-solid fa-book-open"></i>
                 <h3>App Development</h3>
                 <p>It uses a dictionaty of over 200 Latin words, combined with a handful of model sentence.</p>
             </div>
 
-            <div class="card-ad2">
-                <i class="fa-light fa-tv"></i>
+            <div class="card-feature">
+                <i class="fa-solid fa-tv"></i>
                 <h3>App Development</h3>
                 <p>I throw myself down among the tall grass by the stream as i lie close to the earth.</p>
             </div>
 
-            <div class="card-mapp">
-                <i class="fa-light fa-message"></i>
+            <div class="card-feature">
+                <i class="fa-regular fa-message"></i>
                 <h3>Mobile App</h3>
                 <p>There are many variations of passages of Lorem ipsum available but the majority.</p>
             </div>
 
-            <div class="card-ceo">
-                <i class="fa-regular fa-wifi"></i>
+            <div class="card-feature">
+                <i class="fa-solid fa-wifi"></i>
                 <h3>CEO Marketing</h3>
                 <p>Always free from repetition, injected humour, or non-characteristic words etc.</p>
             </div>
 
-            <div class="card-pp">
+            <div class="card-feature">
                 <i class="fa-solid fa-fan"></i>
                 <h3>Personal Portfolio April</h3>
                 <p>It uses a dictionary of over 200 Latin words, combined with a handfull of model sentence.</p>
             </div>
         </div>
+
+        <!-- linea divisora de secciones -->
+        <div class="divisor"></div>
     </section>
 
 <!--.................. MY PORTFOLIO ..................-->  
@@ -122,203 +136,233 @@
         <h5>VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</h5>
         <h2>My Portfolio</h2>
 
-        <!-- cont portfolio -->
+        <!-- contenedor portfolio tarjetas -->
         <div class="cont-portfolio">
-            <div class="card-development">
+            <div class="card-portfolio">
                 <img src="images/portfolio1.jpg" alt="development">
-                <div>
-                    <span>DEVELOPMENT</span>
-                    <span>600</span>
+                <div class="subt-portfolio">
+                    <span class="subt1">DEVELOPMENT</span>
+                    <span class="subt2">600</span>
                 </div>
                 <h3>The services provide for design</h3>
             </div>
 
-            <div class="card-app">
+            <div class="card-portfolio">
                 <img src="images/portfolio2.jpg" alt="application">
-                <div>
-                    <span>APPLICATION</span>
-                    <span>750</span>
+                <div class="subt-portfolio">
+                    <span class="subt1">APPLICATION</span>
+                    <span class="subt2">750</span>
                 </div>
                 <h3>Mobile app landing design & app maintain</h3>
             </div>
 
-            <div class="card-photoshop">
+            <div class="card-portfolio">
                 <img src="images/portfolio3.jpg" alt="photoshop">
-                <div>
-                    <span>PHOTOSHOP</span>
-                    <span>630</span>
+                <div class="subt-portfolio">
+                    <span class="subt1">PHOTOSHOP</span>
+                    <span class="subt2">630</span>
                 </div>
                 <h3>Logo design creativity & Application</h3>
             </div>
             
-            <div class="card-figma">
+            <div class="card-portfolio">
                 <img src="images/portfolio4.jpg" alt="figma">
-                <div>
-                    <span>FIGMA</span>
-                    <span>360</span>
+                <div class="subt-portfolio">
+                    <span class="subt1">FIGMA</span>
+                    <span class="subt2">360</span>
                 </div>
                 <h3>Mobile app landing design & Services</h3>
             </div>
 
 
-            <div class="card-webd1">
+            <div class="card-portfolio">
                 <img src="images/portfolio5.jpg" alt="web design">
-                <div>
-                    <span>WEB DESIGN</span>
-                    <span>280</span>
+                <div class="subt-portfolio">
+                    <span class="subt1">WEB DESIGN</span>
+                    <span class="subt2">280</span>
                 </div>
                 <h3>Design for tecnology & services</h3>
             </div>
 
 
-            <div class="card-webd2">
+            <div class="card-portfolio">
                 <img src="images/portfolio6.jpg" alt="web design">
-                <div>
-                    <span>WEB DESIGN</span>
-                    <span>690</span>
+                <div class="subt-portfolio">
+                    <span class="subt1">WEB DESIGN</span>
+                    <span class="subt2">690</span>
                 </div>
                 <h3>App for tecnology & services</h3>
             </div>
         </div>
+
+        <!-- linea divisora de secciones -->
+        <div class="divisor"></div>
     </section>
 
 <!--.................. MY RESUME ..................-->      
     <section class="resume" id="resume">
-        <div class="encabezado-resume">
             <h5>7+ YEARS OF EXPERIENCE</h5>
             <h2>My Resume</h2>
-            <div>
-                <p>Education</p>
-            </div>
-
-            <div>
-                <p>Professional Skills</p>
-            </div>
-
-            <div>
-                <p>Experience</p>
-            </div>
-
-            <div>
-                <p>Interview</p>
-            </div>
+        
+        <!-- Cinta de botones -->
+        <div class="btn-resume">
+            <a href="#" class="btn-education">Education</a>
+            <a href="#" class="btn-other btn-other-two">Professional Skills</a>
+            <a href="#" class="btn-other btn-other-three">Experience</a>
+            <a href="#" class="btn-other btn-other-four">Interview</a>
         </div>
 
+        <!-- Contenedor de secciones Education y Experience -->
         <div class="cont-resume">
-            <!-- Contenedor izquierdo -->
-            <div class="cont-res-izq">
-                <h5>2007-2010</h5>
-                <h2>Education Quality</h2>
+           
+            <!-- Contenedor izquierdo: Education -->
+            <div class="cont-education">
+                <!-- linea cronologica education -->
+                <div class="linea-large-izq">
+                    <div class="short-izq short-izq-one"></div>
+                    <div class="short-izq short-izq-two"></div>
+                    <div class="short-izq short-izq-three"></div>
+                    <div class="circle-izq circle-izq-one"></div>
+                    <div class="circle-izq circle-izq-two"></div>
+                    <div class="circle-izq circle-izq-three"></div>
+                </div>
 
+                <!-- Encabezado Education -->
+                <div>
+                    <h5>2007-2010</h5>
+                    <h2>Education Quality</h2>
+                </div>
+
+                <!-- Tarjetas Education -->
                 <!-- BOX 1 -->
-                <div class="card-personal">
-                    <div>
-                        <div>
+                <div class="card-resume">
+                    <div class="card-r-encabezado">
+                        <div class="card-titulo">
                             <h3>Personal portfolio April Fools</h3>
                             <h6>University of DVI (1997-2001)</h6>
                         </div>
-                        
-                        <div>
+                            
+                        <div class="point">
                             <span>4.30/5</span>
                         </div>
                     </div>
-                    <div>
+
+                    <div class="card-r-parrafo">
                         <p>The eduaction should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, labortis mauris hendrerit ante.</p>
                     </div>
                 </div>
 
                 <!-- BOX 2 -->
-                <div class="card-example">
-                    <div>
-                        <div>
+                <div class="card-resume">
+                    <div class="card-r-encabezado">
+                        <div class="card-titulo">
                             <h3>Examples of Personal Porfolio</h3>
                             <h6>College os Studies (200-2002)</h6>
                         </div>
-                        
-                        <div>
+                            
+                        <div class="point">
                             <span>4.50/5</span>
                         </div>
                     </div>
-                    <div>
+        
+                    <div class="card-r-parrafo">
                         <p>Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, labortis mauris hendrerit ante.</p>
                     </div>
                 </div>
 
                 <!-- BOX 3 -->
-                <div class="card-tips">
-                    <div>
-                        <div>
+                <div class="card-resume">
+                    <div class="card-r-encabezado">
+                        <div class="card-titulo">
                             <h3>Tips for Personal Portfolio</h3>
                             <h6>University of Studies (1997-2001)</h6>
                         </div>
-                        
-                        <div>
+                            
+                        <div class="point">
                             <span>4.80/5</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="card-r-parrafo">
                         <p>If you are going to use a passage. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, labortis mauris hendrerit ante.</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Contenedor derecho -->
-            <div class="cont-res-der">
-                <h5>2007-2010</h5>
-                <h2>Job Experience</h2>
-                
+            <!-- Contenedor derecho: Job experience -->
+            <div class="cont-experience">
+
+                <!-- linea cronologica experience -->
+                <div class="linea-large-der">
+                    <div class="short-der short-der-one"></div>
+                    <div class="short-der short-der-two"></div>
+                    <div class="short-der short-der-three"></div>
+                    <div class="circle-der circle-der-one"></div>
+                    <div class="circle-der circle-der-two"></div>
+                    <div class="circle-der circle-der-three"></div>
+                </div>
+
+                <!-- Encabezado Experience -->
+                <div>
+                    <h5>2007-2010</h5>
+                    <h2>Job Experience</h2>
+                </div>
+
+                <!-- Tarjetas Experience -->
                 <!-- BOX 4 -->
-                <div class="card-diploma">
-                    <div>
-                        <div>
+                <div class="card-resume">
+                    <div class="card-r-encabezado">
+                        <div class="card-titulo">
                             <h3>Diploma in Web Development</h3>
                             <h6>BSE in CSE (2004-2008)</h6>
                         </div>
                         
-                        <div>
+                        <div class="point">
                             <span>4.70/5</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="card-r-parrafo">
                         <p>Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoret sem in lobortis mauris hendrerit ante.</p>
                     </div>
                 </div>
 
                 <!-- BOX 5 -->
-                <div class="card-mystery">
-                    <div>
-                        <div>
+                <div class="card-resume">
+                    <div class="card-r-encabezado">
+                        <div class="card-titulo">
                             <h3>The Personal Portfolio Mystery</h3>
                             <h6>Job At Rainbow-Themes (2008-2016)</h6>
                         </div>
                         
-                        <div>
+                        <div class="point">
                             <span>4.95/5</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="card-r-parrafo">
                         <p>Generate Lorem impsum which looks. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, labortis mauris hendrerit ante.</p>
                     </div>
                 </div>            
 
                 <!-- BOX 6 -->
-                <div class="card-computer">
-                    <div>
-                        <div>
+                <div class="card-resume">
+                    <div class="card-r-encabezado">
+                        <div class="card-titulo">
                             <h3>Diploma in Computer Science</h3>
                             <h6>Work at Plugin Development (2016-2020)</h6>
                         </div>
                         
-                        <div>
+                        <div class="point">
                             <span>5.00/5</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="card-r-parrafo">
                         <p>Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, labortis mauris hendrerit ante.</p>
                     </div>
                 </div>                 
             </div>
         </div>
+
+        <!-- linea divisora de secciones -->
+        <div class="divisor"></div>
     </section>
 
 
@@ -327,34 +371,38 @@
         <h5>VISIT MY BLOG AND KEEP YOUR FEEDBACK</h5>
         <h2>My Blog</h2>
 
+        <!-- Contenedor tarjetas de my blog -->
         <div class="cont-blog">
-            <div class="card-canada">
+            <div class="card-blog">
                 <img src="images/blog1.jpg" alt="">
                 <div>                    
-                    <h5>CANADA</h5>
-                    <h5>2 min read</h5>
+                    <h5 class="descript">CANADA</h5>
+                    <h5 class="time">2 min read</h5>
                 </div>
                 <h3>T-shirt design is the part of design</h3>
             </div>
 
-            <div class="card-development">
+            <div class="card-blog">
                 <img src="images/blog2.jpg" alt="">
                 <div>
-                    <h5>DEVELOPMENT</h5>
-                    <h5>2 hour read</h5>
+                    <h5 class="descript">DEVELOPMENT</h5>
+                    <h5 class="time">2 hour read</h5>
                 </div>
                 <h3>The service provide for design</h3>
             </div>
 
-            <div class="card-app">
+            <div class="card-blog">
                 <img src="images/blog3.jpg" alt="">
                 <div>
-                    <h5>APPLICATION</h5>
-                    <h5>5 min read</h5>
+                    <h5 class="descript">APPLICATION</h5>
+                    <h5 class="time">5 min read</h5>
                 </div>
                 <h3>Mobile app landing design & app maintain</h3>
             </div>
         </div>
+
+        <!-- linea divisora de secciones -->
+        <div class="divisor"></div>
     </section>
 
 
@@ -363,60 +411,71 @@
         <h5>CONTACT</h5>
         <h2>Contact With Me</h2>
 
-        <div class="cont-contact-izq">
-            <img src="images/manos.jpg" alt="manos">
-            <h3>Nevine Acotanza</h3>
-            <p>Chief Operating officer</p>
-            <p>I am available for freelance work. Connect with me via and call in to my account.</p>
-            <p>Phone: +01234567890</p>
-            <p>Email: admin@example.com</p>
-
-            <span>
-                <span>FIND WITH ME</span>
-                <span>
-                    <button><i class="fa-brands fa-facebook-f"></i></button>
-                    <button><i class="fa-brands fa-linkedin-in"></i></button>
-                    <button><i class="fa-brands fa-instagram"></i></button>
+        <!-- Contenedor izquierdo: datos de contacto -->
+        <div class="cont-contact">
+            <div class="cont-contact-izq">
+                <img src="images/manos.jpg" alt="manos">
+                <h3>Nevine Acotanza</h3>
+                <p>Chief Operating officer</p>
+                <p>I am available for freelance work. Connect with me via and call in to my account.</p>
+                <div class="phone-email">
+                    <p>Phone: +01234567890</p>
+                    <p>Email: admin@example.com</p>
+                </div>
+                
+    
+                <span class="cont-redes">
+                    <span class="find">FIND WITH ME</span>
+                    <span class="cont-btn">
+                        <button class="btn-red"><a href="#" class="btn-red"><i class="fa-brands fa-facebook-f"></i></a></button>
+                        <button class="btn-red"><a href="#" class="btn-red"><i class="fa-brands fa-linkedin-in"></i></a></button>
+                        <button class="btn-red"><a href="#" class="btn-red"><i class="fa-brands fa-instagram"></i></a></button>
+                    </span>
                 </span>
-            </span>
-        </div>
-
-
-        <div class="cont-contact-der">
-            <div>
-                <form action="">
-                    <label for="">YOUR NAME</label>
+            </div>
+    
+            <!-- Contenedor derecho: formulario a rellenar -->
+            <div class="cont-contact-der">
+                <div class="name-phone">
+                    <form action="" class="name">
+                        <label for="">YOUR NAME</label>
+                        <input type="text">
+                    </form>
+    
+                    <form action="" class="phone">
+                        <label for="">PHONE NUMBER</label>
+                        <input type="number">
+                    </form>
+                </div>
+    
+                <form action="" class="email">
+                    <label for="">EMAIL</label>
+                    <input type="email">
+                </form>
+    
+                <form action="" class="subject">
+                    <label for="">SUBJECT</label>
                     <input type="text">
                 </form>
-
-                <form action="">
-                    <label for="">PHONE NUMBER</label>
-                    <input type="number">
+    
+                <form action="" class="your-message">
+                    <label for="">YOUR MESSAGE</label>
+                    <textarea name="" id="" cols="30" rows="7" class="textarea"></textarea>
+                    <button>SEND MESSAGE</button>
                 </form>
             </div>
-
-            <form action="">
-                <label for="">EMAIL</label>
-                <input type="email">
-            </form>
-
-            <form action="">
-                <label for="">SUBJECT</label>
-                <input type="text">
-            </form>
-
-            <form action="">
-                <label for="">YOUR MESSAGE</label>
-                <textarea name="" id="" cols="40" rows="10"></textarea>
-                <button>SEND MESSAGE</button>
-            </form>
         </div>
-    </section>
 
+        <!-- linea divisora de secciones -->
+        <div class="divisor"></div>
+
+    </section>
+    
+<!--.................. FOOTER ..................-->
     <footer>
         <img src="images/footer.jpg" alt="foto-perfil">
-        <span>INBIO</span>
-        <span>Rainbow-Themes</span>
+        <span class="inbio">INBIO</span>
+        <span class="rainbow">Rainbow-Themes</span>
     </footer>
 
 </body>
