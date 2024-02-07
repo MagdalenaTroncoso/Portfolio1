@@ -163,6 +163,7 @@ main h2{
     border-radius: 5px;
     box-shadow: -10px -10px 10px -5px white;
     color: black;
+    cursor: pointer;
 }
 
 
@@ -179,9 +180,12 @@ main h2{
 /* Seccion */
 .features{
     display: flex;
-    margin: var(--margen-seccion);
+    margin: var(--margen-seccion); 
     flex-direction: column;
+    position: relative;
+    overflow: hidden; 
 }
+
 
 /* Encabezado */
 .features h5, .card-feature i{
@@ -195,24 +199,31 @@ main h2{
 /* Contenedor Tarjetas */
 .cont-features{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    gap: 10px;
+    /* flex-wrap: wrap; */
+    width: 1790px;
+    
+    margin: 0px 40px;
+    /* margin-right: 100px; */
+    /* margin: 0 auto; */
+    /* overflow: hidden;  */
 }
+
 
 /* Tarjetas */
 .card-feature{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 50px 20px; 
+    padding: 50px 20px;
     width: 250px;
     height: 150px;
     border:none;
     border-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff); 
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff);
 }
 
 .card-feature p{
@@ -228,6 +239,40 @@ main h2{
 .card-feature h3{
     font-size: 17px;
     font-weight: 600;
+}
+
+
+
+/* ACA ESTA LAS FLECHAS */
+.prev, .next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70%;
+    color: black;
+    /* transform: translateY(-50%); */
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #FF014F;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: visible;
+}
+
+.prev i, .next i{
+    background-color: transparent;
+}
+
+.prev{
+    left: 0px; 
+    /* position: absolute;
+    left: 20px; */
+}
+
+.next{
+    right: 0px;
 }
 
 /* ---------------------------PORTFOLIO---------------------------*/
@@ -253,22 +298,24 @@ main h2{
 
 /* Tarjetas*/
  .card-portfolio{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px 20px; 
+    padding: 20px 20px;
     width: 250px;
     height: 300px;
     border:none;
     border-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff); 
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff);
 }
 
 /* Imagen tarjeta */
 .card-portfolio img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin-bottom: 10px;
     width: 250px;
     height: 150px;
 }
@@ -296,6 +343,89 @@ main h2{
     font-weight: 600;
 }
 
+
+.card-superpuesta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 20px 20px;
+    width: 250px;
+    height: 300px;
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
+    background: linear-gradient(to bottom right, rgb(224, 224, 224), #ffffff);
+}
+
+.card-superpuesta p{
+    font-size: 15px;
+}
+
+.card-oculta-texto{
+    background-color: transparent;
+}
+
+.card-oculta{
+    display: none; 
+}
+
+
+
+/* Botones Saber Mas y Cerrar */
+.saber-mas{
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    /* height: 50px; */
+    /* margin-top: 30px;  */
+}
+
+.card-oculta-btn{
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+}
+
+.btn-mas, .btn-cerrar{
+    font-size: 10px;
+    color: var(--color-fuente2);
+    border:  1px solid #FF014F;
+    background-color: transparent;
+    width: 80px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.btn-mas i, .btn-cerrar i{
+    background-color: transparent;
+}
+
+.fa-github{
+    color: #FF014F;
+    font-size: 40px;
+}
+
+/* boton git-hub */
+.btn-red-git{
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom right, #E2E8EC, #FDFDFE);
+    border:none;
+    border-radius: 5px;
+    box-shadow: -10px -10px 10px -5px rgb(184, 182, 182);
+    cursor: pointer; 
+    margin-top: 30px;
+}
+
+
 /* ---------------------------RESUME---------------------------*/
 /* Seccion */
 .resume{
@@ -319,7 +449,7 @@ main h2{
     border:none;
     border-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff); 
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff);
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
@@ -384,15 +514,15 @@ main h2{
 /* Tarjetas resume */
 .card-resume{
     display: flex;
-    flex-direction: column; 
-    padding: 30px 25px; 
+    flex-direction: column;
+    padding: 30px 25px;
     margin-top: 30px;
     width: 400px;
     height: 150px;
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff); 
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff);
     position: relative;
     flex-wrap: wrap;
 }
@@ -434,8 +564,8 @@ main h2{
 
 .card-resume .point{
     text-align: center;
-    width: 55px;  
-    height: 27px; 
+    width: 55px;
+    height: 27px;
     background-color: white;
     border: none;
     border-radius: 5px;
@@ -585,14 +715,14 @@ main h2{
     border:none;
     border-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff); 
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.041), #ffffff);
 }
 
 /* imagen de las tarjetas*/
 .card-blog img{
     width: 240px;
     height: 180px;
-    border-radius: 10px;    
+    border-radius: 10px;
     position: relative;
     top: -10px;
     margin: 0 auto;
@@ -650,7 +780,7 @@ main h2{
     width: 35%;
     height: 500px;
     border-radius: 10px;
-    padding: 20px; 
+    padding: 20px;
     justify-content: space-between;
     border:none;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.538), 2px 5px 10px -5px rgba(14, 14, 15, 0.782);
@@ -733,11 +863,16 @@ label{
     background-color: transparent;
 }
 
-input {
+input{
     border-radius: 5px;
     border: 1px solid lightgray;
     background-color: white;
     height: 32px;
+    padding: 10px;
+}
+
+.textarea {
+    padding: 10px;
 }
 
 .your-message textarea{
@@ -755,6 +890,7 @@ input {
     border: none;
     border-radius: 5px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 
@@ -937,18 +1073,18 @@ footer .rainbow{
     }
 
     /* Header */
-    
+
     /* Menú desplegable */
     .nav-lista{
         display: none;
     }
-    
+
     header .btn-menu{
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
-    
+
     .nav-lista{
         display: none;
         position: absolute;
@@ -1035,10 +1171,10 @@ footer .rainbow{
         font-size: 10px;
         align-content: center;
     }
-    
+
     .card-resume{
-        width: 250px;  
-        height: 170px;            
+        width: 250px;
+        height: 170px;
     }
 
     .card-r-parrafo{
