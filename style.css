@@ -199,18 +199,10 @@ main h2{
 /* Contenedor Tarjetas */
 .cont-features{
     display: flex;
-    /* align-items: center; */
-    /* justify-content: space-between; */
-    gap: 10px;
-    /* flex-wrap: wrap; */
-    width: 1790px;
-    
-    margin: 0px 40px;
-    /* margin-right: 100px; */
-    /* margin: 0 auto; */
-    /* overflow: hidden;  */
+    gap: 30px;
+    width: 1890px;
+    margin: 0px auto;
 }
-
 
 /* Tarjetas */
 .card-feature{
@@ -241,24 +233,17 @@ main h2{
     font-weight: 600;
 }
 
-
-
-/* ACA ESTA LAS FLECHAS */
-.prev, .next{
+/* Flechas Slider */
+.flechas-slider{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 70%;
-    color: black;
-    /* transform: translateY(-50%); */
+}
+
+.prev, .next{
+    position: relative;
+    bottom: 230px;
+    color:  #FF014F;
     font-size: 24px;
     cursor: pointer;
-    background-color: #FF014F;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    overflow: visible;
 }
 
 .prev i, .next i{
@@ -266,13 +251,11 @@ main h2{
 }
 
 .prev{
-    left: 0px; 
-    /* position: absolute;
-    left: 20px; */
+    left: 165px; 
 }
 
 .next{
-    right: 0px;
+    left: 1160px;
 }
 
 /* ---------------------------PORTFOLIO---------------------------*/
@@ -343,7 +326,6 @@ main h2{
     font-weight: 600;
 }
 
-
 .card-superpuesta{
     display: flex;
     flex-direction: column;
@@ -374,8 +356,6 @@ main h2{
     display: none; 
 }
 
-
-
 /* Botones Saber Mas y Cerrar */
 .saber-mas{
     display: flex;
@@ -384,8 +364,6 @@ main h2{
     position: absolute;
     bottom: 20px;
     right: 20px;
-    /* height: 50px; */
-    /* margin-top: 30px;  */
 }
 
 .card-oculta-btn{
@@ -625,7 +603,6 @@ main h2{
 .circle-izq-three {
     top: 480px;
 }
-
 
 /* Linea cronologica derecha */
 .linea-large-der{
@@ -923,19 +900,8 @@ footer .rainbow{
 
 /* ------------------------------------RESPONSIVE---------------------------------------- */
 
-/* -------------  max-width: 992px  ------------- */
-@media screen and (max-width:992px){
-    /* Header */
-    nav{
-        margin: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .sub-nav, .nav-lista{
-        display: flex;
-        gap: 20px;
-    }
+/* -------------  max-width: 1269px  ------------- */
+@media screen and (max-width:1269px){
 
     /* Margenes de todas las secciones */
     main, .features, .portfolio, .resume, .blog, .contact, footer{
@@ -948,11 +914,6 @@ footer .rainbow{
         align-items: center;
         position: relative;
         top: 25px;
-    }
-
-    /* My resume */
-    .cont-resume{
-        flex-direction: column;
     }
 
     /* My blog */
@@ -969,6 +930,26 @@ footer .rainbow{
 
     .card-blog h3{
         width: 190px;
+    }
+}
+
+/* -------------  max-width: 992px  ------------- */
+@media screen and (max-width:992px){
+    /* Header */
+    nav{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sub-nav, .nav-lista{
+        display: flex;
+        gap: 20px;
+    }
+
+    /* My resume */
+    .cont-resume{
+        flex-direction: column;
     }
 }
 
@@ -1161,6 +1142,15 @@ footer .rainbow{
         height: 150px;
     }
 
+    .card-superpuesta{
+        width: 200px;
+        height: 260px;
+    }
+
+    .card-superpuesta p{
+        font-size: 10px;
+    }
+
     /* Resume */
     .btn-resume{
         height: 40px;
@@ -1218,8 +1208,10 @@ footer .rainbow{
         height: 400px;
     }
     .email, .subject, .your-message{
-        display: flex;
-        flex-direction: column;
         gap: 3px;
     }
-}
+
+    .textarea {
+        height: 32px; 
+    }
+ }

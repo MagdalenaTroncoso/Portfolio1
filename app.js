@@ -21,50 +21,24 @@ let btnCerrar= document.querySelectorAll('.btn-cerrar');
 
 
 function mostrar() {
-    // 'this' hace referencia al botón que desencadenó el evento
+    //"this" hace referencia al botón que desencadenó el evento
     this.parentNode.nextElementSibling.classList.replace('card-oculta', 'card-superpuesta');
 }
 
-// Itera sobre todos los botones 'SABER MÁS' y agrega el event listener
+    //Itera sobre todos los botones "SABER MÁS" y agrega el event listener
 btnMas.forEach(btn => {
     btn.addEventListener('click', mostrar);
 });
 
 function ocultar() {
-    // 'this' hace referencia al botón que desencadenó el evento
+    //"this" hace referencia al botón que desencadenó el evento
     this.parentNode.parentNode.classList.replace('card-superpuesta', 'card-oculta');
 }
 
-// Itera sobre todos los botones 'CERRAR' y agrega el event listener
+// Itera sobre todos los botones "CERRAR" y agrega el event listener
 btnCerrar.forEach(btn => {
     btn.addEventListener('click', ocultar);
 });
-
-
-
-// let cardSuperpuesta= document.getElementById('card-oculta1');
-// let btnMas= document.getElementById('btn-mas1');
-// let btnCerrar= document.getElementById('btn-cerrar1');
-
-// let cardSuperpuesta= document.getElementById('card-oculta2');
-// let btnMas= document.getElementById('btn-mas2');
-// let btnCerrar= document.getElementById('btn-cerrar2');
-
-
-// function mostrar (){
-//     cardSuperpuesta.classList.replace('card-oculta','card-superpuesta');
-// }
-
-// btnMas.addEventListener ('click', mostrar);
-
-// function ocultar (){
-//     cardSuperpuesta.classList.replace('card-superpuesta','card-oculta');
-// }
-
-// btnCerrar.addEventListener ('click', ocultar);
-
-
-
 
 
 //ACTIVIDAD 3= MENSAJE ENVIADO CON EXITO EN FORMULARIO
@@ -107,7 +81,7 @@ function tarjetasSlider(direccion) {
         index = 0
     }
 
-    let desplazamiento = -index * 895; //calculo de desplazamiento horizontal. 895 xq ese es el width de 3 cards, con sus gap.
+    let desplazamiento = -index * 945; //calculo de desplazamiento horizontal. 895 xq ese es el width de 3 cards, con sus gap.
     slider.style.transform=`translateX(${desplazamiento}px)`
 };
 tarjetasSlider(0); //mostrar la primera imagen al cargar la pagina
